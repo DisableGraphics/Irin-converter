@@ -1,0 +1,6 @@
+/home/disablegraphics/Projects/Converter/Converter/bin/Debug/Converter.exe
+/home/disablegraphics/Projects/Converter/Converter/bin/Debug/Converter.pdb
+/home/disablegraphics/Projects/Converter/Converter/obj/x86/Debug/Converter.csprojAssemblyReference.cache
+/home/disablegraphics/Projects/Converter/Converter/obj/x86/Debug/Converter.csproj.CoreCompileInputs.cache
+/home/disablegraphics/Projects/Converter/Converter/obj/x86/Debug/Converter.exe
+/home/disablegraphics/Projects/Converter/Converter/obj/x86/Debug/Converter.pdb
