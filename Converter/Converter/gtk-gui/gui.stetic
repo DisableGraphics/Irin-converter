@@ -56,6 +56,14 @@
         <property name="Label" translatable="yes">About</property>
         <property name="ShortLabel" translatable="yes">About</property>
       </action>
+      <action id="PNGAction">
+        <property name="Type">Action</property>
+        <property name="Accelerator">&lt;Primary&gt;g</property>
+        <property name="IsImportant">True</property>
+        <property name="Label" translatable="yes">PNG</property>
+        <property name="ShortLabel" translatable="yes">PNG</property>
+        <signal name="Activated" handler="ToPNG" />
+      </action>
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Irin converter</property>
@@ -74,6 +82,7 @@
               </node>
               <node type="Menu" action="ConvertAction">
                 <node type="Menuitem" action="PDFAction" />
+                <node type="Menuitem" action="PNGAction" />
               </node>
               <node type="Menu" action="HelpAction">
                 <node type="Menuitem" action="HelpAction1" />

@@ -21,6 +21,8 @@ public partial class MainWindow
 
 	private global::Gtk.Action AboutAction;
 
+	private global::Gtk.Action PNGAction;
+
 	private global::Gtk.VBox vbox1;
 
 	private global::Gtk.MenuBar menubar1;
@@ -67,6 +69,10 @@ public partial class MainWindow
 		this.AboutAction = new global::Gtk.Action("AboutAction", global::Mono.Unix.Catalog.GetString("About"), null, null);
 		this.AboutAction.ShortLabel = global::Mono.Unix.Catalog.GetString("About");
 		w1.Add(this.AboutAction, null);
+		this.PNGAction = new global::Gtk.Action("PNGAction", global::Mono.Unix.Catalog.GetString("PNG"), null, null);
+		this.PNGAction.IsImportant = true;
+		this.PNGAction.ShortLabel = global::Mono.Unix.Catalog.GetString("PNG");
+		w1.Add(this.PNGAction, "<Primary>g");
 		this.UIManager.InsertActionGroup(w1, 0);
 		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
@@ -76,7 +82,7 @@ public partial class MainWindow
 		this.vbox1 = new global::Gtk.VBox();
 		this.vbox1.Name = "vbox1";
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString(@"<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='OpenAction' action='OpenAction'/><menuitem name='ExitAction' action='ExitAction'/></menu><menu name='ConvertAction' action='ConvertAction'><menuitem name='PDFAction' action='PDFAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='HelpAction1' action='HelpAction1'/><menuitem name='AboutAction' action='AboutAction'/></menu></menubar></ui>");
+		this.UIManager.AddUiFromString(@"<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='OpenAction' action='OpenAction'/><menuitem name='ExitAction' action='ExitAction'/></menu><menu name='ConvertAction' action='ConvertAction'><menuitem name='PDFAction' action='PDFAction'/><menuitem name='PNGAction' action='PNGAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='HelpAction1' action='HelpAction1'/><menuitem name='AboutAction' action='AboutAction'/></menu></menubar></ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add(this.menubar1);
@@ -152,6 +158,7 @@ public partial class MainWindow
 		this.PDFAction.Activated += new global::System.EventHandler(this.ToPDF);
 		this.ExitAction.Activated += new global::System.EventHandler(this.Exit);
 		this.HelpAction1.Activated += new global::System.EventHandler(this.Help);
+		this.PNGAction.Activated += new global::System.EventHandler(this.ToPNG);
 		this.button1.Activated += new global::System.EventHandler(this.Open);
 		this.button1.Clicked += new global::System.EventHandler(this.Open);
 		this.button2.Activated += new global::System.EventHandler(this.OpenFolder);

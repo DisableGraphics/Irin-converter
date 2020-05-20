@@ -67,7 +67,13 @@ public partial class MainWindow : Gtk.Window
 
     protected void ToPDF(object sender, EventArgs e)
     {
-        Process.Start("convert",textview2.Buffer.Text + " output.pdf");
+        Process.Start("convert",textview2.Buffer.Text + " output/output.pdf");
+    }
+
+    protected void ToPNG(object sender, EventArgs e)
+    {
+        Process.Start("convert", textview2.Buffer.Text + " output/output.png");
+
     }
 }
 
